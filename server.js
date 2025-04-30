@@ -14,9 +14,10 @@ const pool = mysql.createPool({
     host: 'mysql-14ceb35a-luiswill1703-2a1d.l.aivencloud.com',
     port: '11836',
     user: 'avnadmin',
-    password: 'KvqME2bJ89ZxdDuZ6tw@02',
+    password: 'AVNS_KvqME2bJ89ZxdDuZ6tw',
     database: 'defaultdb'
 });
+
 
 app.post('/api/mysql', async (req, res) => {
     const { nome, login, senha, tipo, id } = req.body;
@@ -70,7 +71,7 @@ app.post('/api/mysql', async (req, res) => {
                     addAnd = " and ";
                 }
 
-                var strSql = "select * from `defaultdb`.`tbl_login` where" + 
+                var strSql = "select * from `defaultdb`.`tbl_cadastro` where" + 
                     addNome + addAnd + addLogin + ";";
                 var [rows, fields] = await pool.query(strSql);
                 if (rows.length > 0) {
@@ -86,7 +87,7 @@ app.post('/api/mysql', async (req, res) => {
                 }
                 break;
                 case 'atualizacao':
-                    var strSql = "select * from `defaultdb`.`tbl_login`;";
+                    var strSql = "select * from `defaultdb`.`tbl_cadastro`;";
                     var [rows, fields] = await pool.query(strSql);
                     if (rows.length > 0) {
                         res.json({ 
@@ -94,7 +95,7 @@ app.post('/api/mysql', async (req, res) => {
                             rows: rows
                         });
                     } else {
-                        throw ("Não há registro algum na tabela tbl_login!");
+                        throw ("Não há registro algum na tabela tbl_cadastro!");
                     }
                     break;
                 case 'atualizar':
@@ -128,7 +129,7 @@ app.post('/api/mysql', async (req, res) => {
                         addSenha = " , " + addSenha;
                     }
     
-                    var strSql = "update `defaultdb`.`tbl_login` set " + 
+                    var strSql = "update `defaultdb`.`tbl_cadastro` set " + 
                         addNome + addLogin + addSenha + 
                         " where `id` = " + addId + ";";
                     var [rows, fields] = await pool.query(strSql);
@@ -137,7 +138,7 @@ app.post('/api/mysql', async (req, res) => {
                             message: 'Registro atualizado com sucesso!'
                         });
                     } else {
-                        throw ("Não foi possível atualizar o id: " + addId + " na tabela tbl_login!");
+                        throw ("Não foi possível atualizar o id: " + addId + " na tabela tbl_cadastro!");
                     }
                     break;
             default:
