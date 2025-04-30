@@ -14,7 +14,7 @@ const pool = mysql.createPool({
     host: 'mysql-14ceb35a-luiswill1703-2a1d.l.aivencloud.com',
     port: '11836',
     user: 'avnadmin',
-    password: 'AVNS_KvqME2bJ89ZxdDuZ6tw@02',
+    password: 'KvqME2bJ89ZxdDuZ6tw@02',
     database: 'defaultdb'
 });
 
