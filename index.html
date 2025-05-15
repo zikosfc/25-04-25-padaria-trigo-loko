@@ -5,14 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Padaria Trigo Loko</title>
   <meta name="description" content="Padaria artesanal com os melhores pães, doces e salgados. Feitos com ingredientes selecionados e receitas tradicionais.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  
-  <link rel="stylesheet" href="./index.css" />
-  <link rel="stylesheet" href="./cookies.css" />
   <link rel="shortcut icon" href="./logo.png" type="image/png" />
- 
+  <link rel="stylesheet" href="./index.css">
+
 </head>
 <body>
   <!-- Banner de Promoção -->
@@ -37,8 +33,6 @@
       <a href="#promocoes">Promoções</a>
       <a href="#sobre">Sobre</a>
       <a href="#contato">Contato</a>
-      <a href="login.html">Login</a>
-      <a href="cadastro.html">Cadastro</a>
       <div class="cart-icon" id="cart-icon">
         <i class="fas fa-shopping-cart"></i>
         <span class="cart-count">0</span>
@@ -268,10 +262,10 @@
             </div>
             <div class="depoimento-author">
               <div class="author-avatar">
-                <img src="eugenio.jpg" alt="Erik Graciano">
+                <img src="eugenio.jpg" alt="Pietro">
               </div>
               <div class="author-info">
-                <h4>Erik Graciano</h4>
+                <h4> Graciano</h4>
                 <p>Cliente há 5 anos</p>
               </div>
             </div>
@@ -468,6 +462,25 @@
         <p>Frete grátis para compras acima de R$ 30,00</p>
       </div>
     </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Padaria Trigo Loko. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+<!-- Botões de login/logout -->
+<!-- <button id="openLogin">Login</button>
+<button id="logout" style="display: none;">Logout</button> -->
+
+<!-- Modal -->
+<!-- <div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Login</h2>
+    <input type="email" id="email" placeholder="Email"><br>
+    <input type="password" id="password" placeholder="Senha"><br>
+    <button id="loginBtn">Entrar</button>
+  </div>
+</div> -->
 
 <div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered">
@@ -808,10 +821,20 @@
       }
     }
 
+    // Carregar o carrinho quando a página é carregada
+    window.addEventListener('DOMContentLoaded', loadCart);
   </script>
 
-<script src="./cookies.js"></script>
-
+<!-- Modal -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Login</h2>
+    <input type="email" id="email" placeholder="Email"><br>
+    <input type="password" id="password" placeholder="Senha"><br>
+    <button id="loginBtn">Entrar</button>
+  </div>
+</div>
 <script src="index.js"></script>
 <script src="modal-login.js"></script>
 <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
