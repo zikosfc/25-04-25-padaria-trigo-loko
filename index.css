@@ -76,38 +76,7 @@
       font-style: italic;
     }
 
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 25px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--primary-dark);
-      font-weight: 600;
-      transition: var(--transition);
-      position: relative;
-    }
-
-    nav a:hover {
-      color: #7a4023;
-    }
-
-    nav a::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      bottom: -5px;
-      left: 0;
-      background-color: #7a4023;
-      transition: var(--transition);
-    }
-
-    nav a:hover::after {
-      width: 100%;
-    }
+    
 
     .cart-icon {
       font-size: 1.3rem;
@@ -173,34 +142,7 @@
       margin-bottom: 30px;
     }
 
-    .btn {
-      display: inline-block;
-      background-color: #7a4023;
-      color: var(--white);
-      padding: 12px 30px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: var(--transition);
-      border: 2px solid #7a4023;
-    }
-
-    .btn:hover {
-      background-color: transparent;
-      color: #7a4023;
-    }
-
-    .btn-outline {
-      background-color: #7a4023;
-      color: #ffffff;
-      margin-left: 15px;
-    }
-
-    .btn-outline:hover {
-      background-color: #7a4023;
-      color: var(--white);
-    }
-
+    
     /* Main Content */
     main {
       padding: 60px 5%;
@@ -610,16 +552,16 @@
       flex: 1;
     }
 
-    .form-group {
+     .form-group {
       margin-bottom: 20px;
-    }
+    } 
 
-    .form-group label {
+     .form-group label {
       display: block;
       margin-bottom: 8px;
       font-weight: 600;
       color: var(--primary-dark);
-    }
+    } 
 
     .form-group input,
     .form-group textarea {
@@ -629,21 +571,21 @@
       border-radius: 8px;
       font-family: 'Open Sans', sans-serif;
       transition: var(--transition);
-    }
+    } 
 
-    .form-group textarea {
+     .form-group textarea {
       height: 150px;
       resize: vertical;
-    }
+    } 
 
-    .form-group input:focus,
+     .form-group input:focus,
     .form-group textarea:focus {
       outline: none;
       border-color: #7a4023;
       box-shadow: 0 0 0 3px rgba(181, 107, 59, 0.2);
-    }
+    } 
 
-    /* Mapa - Adicionado inspirado na Vianney */
+   
     .mapa {
       height: 400px;
       margin: 80px 0;
@@ -775,88 +717,7 @@
       border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    /* Responsivo */
-    @media (max-width: 992px) {
-      .sobre-content, .contato-content {
-        flex-direction: column;
-      }
-      
-      .sobre-img, .contato-info {
-        margin-bottom: 30px;
-      }
-      
-      .hero h2 {
-        font-size: 2.5rem;
-      }
-    }
-
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        padding: 15px;
-      }
-      
-      .logo-container {
-        margin-bottom: 15px;
-      }
-      
-      nav {
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-      
-      .hero h2 {
-        font-size: 2rem;
-      }
-      
-      .btn {
-        display: block;
-        margin: 10px auto;
-        width: 80%;
-      }
-      
-      .btn-outline {
-        margin-left: 0;
-      }
-      
-      .newsletter-form {
-        flex-direction: column;
-      }
-      
-      .newsletter-form input {
-        border-radius: 30px;
-        margin-bottom: 10px;
-      }
-      
-      .newsletter-form button {
-        border-radius: 30px;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .section-title h2 {
-        font-size: 2rem;
-      }
-      
-      .sobre, .contato, .newsletter {
-        padding: 40px 20px;
-      }
-      
-      .produto {
-        width: 260px;
-      }
-      
-      .categorias {
-        gap: 10px;
-      }
-      
-      .categoria-btn {
-        padding: 8px 15px;
-        font-size: 0.9rem;
-      }
-    }
-  /* NOVOS ESTILOS */
+    
 .badge-promocao {
   position: absolute;
   top: 10px;
@@ -1137,192 +998,6 @@
   margin-bottom: 20px;
 }
 
-@media (max-width: 768px) {
-  .destaque-semanal-content {
-    flex-direction: column;
-  }
-  
-  .destaque-semanal img {
-    width: 100%;
-    max-width: 400px;
-  }
-  
-  .cart-container {
-    max-width: 100%;
-  }
-}
-  /* Estilos do Modal de Pagamento */
-.payment-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1000;
-  display: none;
-  justify-content: center;
-  align-items: center;
-}
-
-.payment-container {
-  background-color: var(--white);
-  border-radius: 15px;
-  width: 90%;
-  max-width: 500px;
-  padding: 25px;
-  box-shadow: var(--shadow);
-  max-height: 90vh;
-  overflow-y: auto;
-}
-
-.payment-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid #eee;
-}
-
-.payment-header h2 {
-  color: var(--primary-dark);
-}
-
-.close-payment {
-  background: none;
-  border: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  color: var(--primary-dark);
-}
-
-.payment-summary {
-  margin-bottom: 20px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid #eee;
-}
-
-.payment-summary h3 {
-  margin-bottom: 15px;
-  color: var(--primary-dark);
-}
-
-#payment-items {
-  max-height: 150px;
-  overflow-y: auto;
-  margin-bottom: 15px;
-}
-
-.payment-item {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-
-.payment-total {
-  display: flex;
-  justify-content: space-between;
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: var(--primary-dark);
-}
-
-.payment-methods {
-  margin-bottom: 25px;
-}
-
-.payment-methods h3 {
-  margin-bottom: 15px;
-  color: var(--primary-dark);
-}
-
-.payment-option {
-  margin-bottom: 10px;
-}
-
-.payment-option input {
-  margin-right: 10px;
-}
-
-.payment-option label {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.payment-option i {
-  margin-right: 10px;
-  width: 20px;
-  color: #7a4023;
-}
-
-.payment-actions {
-  display: flex;
-  gap: 15px;
-}
-
-.confirm-payment {
-  flex: 1;
-  background-color: var(--primary-dark);
-  color: white;
-}
-
-.cancel-payment {
-  flex: 1;
-}
-
-@media (max-width: 576px) {
-  .payment-actions {
-    flex-direction: column;
-  }
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 100;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0,0,0,0.6);
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  margin-top: 250px;
-  margin-left: 500px;
-  background: white;
-  border-radius: 10px;
-  width: 900px;
-  text-align: center;
-  position: relative;
-}
-
-.close {
-  position: absolute;
-  right: 10px; top: 5px;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.container-custom {
-          display: flex;
-          flex-direction: column;
-          background-color: #fff0f6;
-          border-radius: 20px;
-          box-shadow: 0 0 30px rgba(255, 182, 193, 0.4);
-          width: 100%;
-          max-width: 1200px;
-          overflow: hidden;
-        }
-
-        .content {
-          width: 100%;
-          display: flex;
-          flex-direction: row;
-        }
-
         .left-panel {
           flex: 1;
           background-color: #7a4023 ;
@@ -1361,35 +1036,6 @@
           margin-bottom: 1.5rem;
           color: #7a4023;
         }
-
-        input-group {
-      position: relative;
-      margin-bottom: 1.2rem;
-    }
-
-    .input-group i {
-      position: absolute;
-      top: 50%;
-      left: 12px;
-      transform: translateY(-50%);
-      color: #7a4023;
-    }
-
-    .form-control {
-      margin-top: 30px;
-      height: 50px;
-      width: 90% ;
-      background-color: #f0b89c;
-      border: 1px solid #b17354;
-      color: #7a4023;
-      border-radius: 10px;
-      padding-left: 10px;
-    }
-
-    .form-control::placeholder {
-      text-align: left;
-      color: #7a4023;
-    }
 
     .btn-primary {
       background-color: #7a4023;
@@ -1442,3 +1088,206 @@
       padding-bottom: 1rem;
       color: #7a4023;
     }
+    /* Responsividade */
+@media (max-width: 1200px) {
+  .hero h2 {
+    font-size: 3rem;
+  }
+  
+  .destaque-semanal-content {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .sobre-content, 
+  .contato-content,
+  .destaque-semanal-content {
+    flex-direction: column;
+  }
+  
+  .sobre-img, 
+  .contato-info,
+  .destaque-semanal img {
+    margin-bottom: 30px;
+  }
+  
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+  
+  .destaque-semanal img {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 30px;
+  }
+  
+  .cart-container {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 15px;
+  }
+  
+  .logo-container {
+    margin-bottom: 15px;
+  }
+  
+  .hero {
+    height: 60vh;
+  }
+  
+  .hero h2 {
+    font-size: 2rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .section-title h2 {
+    font-size: 2rem;
+  }
+  
+  .sobre, 
+  .contato, 
+  .newsletter {
+    padding: 40px 20px;
+  }
+  
+  .produto {
+    width: 240px;
+  }
+  
+  .categorias {
+    gap: 10px;
+  }
+  
+  .categoria-btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+  
+  .newsletter-form {
+    flex-direction: column;
+  }
+  
+  .newsletter-form input {
+    border-radius: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .newsletter-form button {
+    border-radius: 30px;
+  }
+  
+  .cart-container {
+    max-width: 100%;
+  }
+  
+  .payment-actions {
+    flex-direction: column;
+  }
+  
+  .left-panel, 
+  .right-panel {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    height: 50vh;
+  }
+  
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+  
+  .section-title h2 {
+    font-size: 1.8rem;
+  }
+  
+  .produto {
+    width: 220px;
+    margin: 0 10px;
+  }
+  
+  .promo-banner {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+  
+  .destaque-semanal-text .preco {
+    font-size: 1.3rem;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .footer-column {
+    text-align: center;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+  
+  .whatsapp-fixed {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .seta {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .badge-promocao {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+  
+  .hero p {
+    font-size: 0.9rem;
+  }
+  
+  .produto {
+    width: 200px;
+  }
+  
+  .categoria-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+  
+  .sobre, 
+  .contato, 
+  .newsletter {
+    padding: 30px 15px;
+  }
+  
+  .destaque-card {
+    padding: 20px;
+  }
+  
+  .depoimento-card {
+    padding: 20px;
+  }
+}

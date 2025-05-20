@@ -247,4 +247,6 @@ const carrosseis = {
 
     // Carregar o carrinho quando a página é carregada
     window.addEventListener('DOMContentLoaded', loadCart);
- z
+
+    
+    
