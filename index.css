@@ -132,15 +132,15 @@
 
     /* Promo Banner - Adicionado inspirado na Vianney */
     .promo-banner {
-      background-color: white;
-      color: #7a4023;
+      background-color: #7a4023;
+      color: white;
       text-align: center;
       padding: 10px;
       font-size: 0.9rem;
     }
 
     .promo-banner a {
-      color:#7a4023;
+      color: white;
       text-decoration: underline;
       font-weight: bold;
       margin-left: 10px;
